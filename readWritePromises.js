@@ -24,8 +24,9 @@ export const save = (file, newData) => {
     })
 }
 
-export const obtenerTotalDeGastosRealizados = async (nombre) => {
+export const obtenerTotalDeGastosRealizados = async (spend) => {
     const spends = await get("./spends.json")
-    const userToReturn = spends.filter(user => user.name_spend === nombre.search_spend)
+    const nameLower = spend.search_spend.toLowerCase();
+    const userToReturn = spends.filter(user => user.name_spend === nameLower)
     return userToReturn[0]
 }
