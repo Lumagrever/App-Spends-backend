@@ -60,11 +60,21 @@ const createNewSpendName = async () => {
 }*/
 
 const createNewSpend = async () => {
+    try {
+        const spend = await promptSpend()
+        const spendJson = await get("./spends.json")
+        const newSpendData = [...spendJson, spend]
+        save("./spends.json", newSpendData)
+    } catch (error) {
+        console.log(error)
+    }
+    /*
     const spend = await promptSpend()
     const spendJson = await get("./spends.json")
     const newSpendData = [...spendJson, spend]
 
     save("./spends.json", newSpendData)
+    */
 }
 
 const getAllSpends = async() => {

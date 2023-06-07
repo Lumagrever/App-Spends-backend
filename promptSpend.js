@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 
+/*
 const nameSpend = [
     {
         type: 'input',
@@ -8,13 +9,22 @@ const nameSpend = [
     }
 ];
 
+*/
+
 const questions = [
     {
         type: 'input',
-        name: 'spend',
-        message: 'Escribe aqui tu gasto reciente'
+        name: 'name_spend',
+        message: 'Escribe aqui el nombre de tu compra'
+    },
+    {
+        type: 'input',
+        name: 'price_spend',
+        message: 'Escribe aqui el monto de tu compra'
     }
 ];
+
+
 
 const searchSpend = [
     {
@@ -23,6 +33,8 @@ const searchSpend = [
         message: 'Ingrese el gasto que desea buscar',
     },
 ];
+
+/*
 
 export const promptNameSpend = () => {
     return new Promise((resolve, reject) => {
@@ -33,6 +45,8 @@ export const promptNameSpend = () => {
         }
     })
 }
+
+*/
 
 export const promptSpend = () => {
     return new Promise((resolve, reject) => {

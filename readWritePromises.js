@@ -1,7 +1,7 @@
 import fs from "fs"
 
 export const get = (file) => {
-    return new Promise ((resolve,reject) => {
+    return new Promise ((resolve, reject) => {
         fs.readFile(file, "utf-8",(error, contenido) => {
             if(error){
                 reject(error)
@@ -26,6 +26,6 @@ export const save = (file, newData) => {
 
 export const obtenerTotalDeGastosRealizados = async (nombre) => {
     const spends = await get("./spends.json")
-    const userToReturn = spends.filter(user => user.first_name === nombre.search_name)
+    const userToReturn = spends.filter(user => user.name_spend === nombre.search_spend)
     return userToReturn[0]
 }
