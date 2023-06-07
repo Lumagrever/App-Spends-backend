@@ -14,7 +14,7 @@ const main = async() => {
                 message: '¿Selecciona una opción',
                 choices:[
                    // {value:1, name: "Escriba el nombre del producto"}, 
-                    {value:11, name: "Agregar nuevo gasto"},
+                    {value:1, name: "Agregar nuevo gasto"},
                     {value:2, name: "Obtener gastos realizados"},
                     {value:3, name: "Buscar gasto especifico"},
                     {value:4, name: "Salir"},
